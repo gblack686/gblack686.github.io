@@ -1626,7 +1626,7 @@ L.MarkerCluster.include(!L.DomUtil.TRANSITION ? {
 } : {
 	//Animated versions here
 	SVG_ANIMATION: (function () {
-		return document.createElementNS('http://www.w3.org/2000/svg', 'animate').toString().indexOf('SVGAnimate') > -1;
+		return document.createElementNS('https://www.w3.org/2000/svg', 'animate').toString().indexOf('SVGAnimate') > -1;
 	}()),
 
 	_animationSpiderfy: function (childMarkers, positions) {

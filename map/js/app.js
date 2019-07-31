@@ -20,7 +20,7 @@ var points = L.geoCsv (null, {
             if (title == labelColumn) {
                 layer.bindLabel(feature.properties[clave], {className: 'map-label'});
             }
-            if (attr.indexOf('http') === 0) {
+            if (attr.indexOf('https') === 0) {
                 attr = '<a target="_blank" href="' + attr + '">'+ attr + '</a>';
             }
             if (attr) {
@@ -108,7 +108,7 @@ function populateTypeAhead(csv, delimiter) {
         for (var j = items.length - 1; j >= 0; j--) {
             var item = items[j].strip();
             item = item.replace(/"/g,'');
-            if (item.indexOf("http") !== 0 && isNaN(parseFloat(item))) {
+            if (item.indexOf("https") !== 0 && isNaN(parseFloat(item))) {
                 typeAheadSource.push(item);
                 var words = item.split(/\W+/);
                 for (var k = words.length - 1; k >= 0; k--) {
